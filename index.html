@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>40通りの2行表示hello world</title>
+  <style>
+    .a6>div {
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+    .a8>div::before {
+      white-space: pre;
+      content: "hello\Aworld";
+    }
+    .a9 {
+      ::before {
+        content: counter(a, lower-alpha);
+      }
+      :nth-child(1) {
+        counter-reset: a 8;
+      }
+      :nth-child(2) {
+        counter-reset: a 5;
+      }
+      :nth-child(3) {
+        counter-reset: a 12;
+      }
+      :nth-child(5) {
+        counter-reset: a 15;
+      }
+      :nth-child(6) {
+        counter-reset: a 23;
+      }
+      :nth-child(7) {
+        counter-reset: a 15;
+      }
+      :nth-child(8) {
+        counter-reset: a 18;
+      }
+      :nth-child(9) {
+        counter-reset: a 12;
+      }
+      :nth-child(10) {
+        counter-reset: a 4;
+      }
+    }
+    .a10 {
+      :nth-child(1) {
+        text-emphasis: 'h';
+      }
+      :nth-child(2) {
+        text-emphasis: 'e';
+      }
+      :nth-child(3) {
+        text-emphasis: 'l';
+      }
+      :nth-child(4) {
+        text-emphasis: 'l';
+      }
+      :nth-child(5) {
+        text-emphasis: 'o';
+      }
+    }
+    .a11 {
+      rt {
+        letter-spacing: 3px;
+      }
+    }
+    .a12 {
+      ::before {
+        content: counter(a, lower-alpha);
+      }
+      :nth-child(1) {
+        counter-reset: a 3752127;
+      }
+      :nth-child(2) {
+        counter-reset: a 10786572;
+      }
+    }
+    .a13 {
+      ol {
+        font-family: monospace;
+        display: flex;
+        flex-wrap: wrap;
+        width: 5ch;
+        padding-left: 0;
+      }
+      li {
+        list-style: helloworld13 inside;
+      }
+    }
+    @counter-style helloworld13 {
+      system: cyclic;
+      symbols: h e l l o w o r l d;
+      suffix: '';
+    }
+    .a14>div {
+      display: flex;
+      flex-direction: column;
+    }
+    .a15>div {
+      display: grid;
+    }
+    .a16>span {
+      display: ruby;
+      &::after {
+        display: ruby-text;
+        content: "hello";
+      }
+    }
+    .a17>div {
+      display: flow-root;
+      span {
+        float: left;
+        clear: both;
+      }
+    }
+    .a18>img {
+      white-space: pre;
+    }
+    .a19>div {
+      font-family: monospace;
+      text-indent: 4ch;
+      letter-spacing: -2ch;
+    }
+    .a20 {
+      font-family: monospace;
+      overflow-wrap: anywhere;
+      width: 5ch;
+    }
+    .a21>div {
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      overflow-wrap: anywhere;
+      height: 2ch;
+      line-height: 10px;
+    }
+    .a22>div {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      overflow-wrap: anywhere;
+      height: 2ch;
+      line-height: 10px;
+    }
+    .a23 {
+      ol {
+        padding-left: 0;
+      }
+      li {
+        list-style: helloworld23 inside;
+      }
+    }
+    @counter-style helloworld23 {
+      system: cyclic;
+      symbols: hello world;
+      suffix: '';
+    }
+    .a24 {
+      div::before {
+        white-space: pre;
+        content: attr(data-text);
+      }
+    }
+    .a25>q {
+      quotes: "hello" "world";
+      display: flex;
+      flex-direction: column;
+    }
+    .a26 {
+      :empty::before {
+        content: counters(a, '', lower-alpha);
+      }
+      >:nth-child(1) {
+        counter-reset: a 8;
+        >span {
+          counter-reset: a 5;
+          >span {
+            counter-reset: a 12;
+            >span {
+              counter-reset: a 12;
+              >span {
+                counter-reset: a 15;
+              }
+            }
+          }
+        }
+      }
+      >:nth-child(2) {
+        counter-reset: a 23;
+        >span {
+          counter-reset: a 15;
+          >span {
+            counter-reset: a 18;
+            >span {
+              counter-reset: a 12;
+              >span {
+                counter-reset: a 4;
+              }
+            }
+          }
+        }
+      }
+    }
+    .a27 {
+      ul {
+        padding-left: 0;
+      }
+      li {
+        list-style-position: inside;
+      }
+      li::marker {
+        white-space: pre;
+        content: "hello\Aworld";
+      }
+    }
+    .a28 {
+      ::before {
+        content: "world";
+        display: list-item;
+        list-style-position: inside;
+        white-space: pre;
+      }
+      ::before::marker {
+        content: "hello\A";
+      }
+    }
+    .a29>div {
+      width: min-content;
+    }
+    .a31 {
+      div {
+        writing-mode: vertical-rl;
+        rotate: -90deg;
+      }
+    }
+    .a32 {
+      div {
+        width: 1px;
+        aspect-ratio: 1;
+        columns: 1px;
+        column-gap: 0;
+        overflow: auto;
+        scroll-marker-group: before;
+        margin-bottom: 3lh;
+      }
+      ::before {
+        content: '';
+        display: block;
+        height: 100%;
+      }
+      ::column::scroll-marker {
+        content: "hello\Aworld";
+        white-space: pre;
+      }
+    }
+    .a34 {
+      select,
+      ::picker(select) {
+        appearance: base-select;
+      }
+      ::picker-icon {
+        white-space: pre;
+        content: "hello\Aworld";
+      }
+    }
+    .a35 {
+      select,
+      ::picker(select) {
+        appearance: base-select;
+      }
+      ::checkmark {
+        white-space: pre;
+        content: "hello\Aworld";
+      }
+    }
+    .a36 {
+      div {
+        overflow: auto;
+      }
+      ::scroll-button(left) {
+        white-space: pre;
+        content: "hello\Aworld";
+      }
+    }
+    .a37 {
+      color: transparent;
+      background: black;
+      background-clip: text;
+    }
+    .a38>button {
+      width: 50px;
+      height: 50px;
+    }
+    .a39>span::before {
+      white-space: pre;
+      content: var(--a);
+    }
+    @property --a {
+      syntax: "<string>";
+      inherits: false;
+      initial-value: "hello\Aworld";
+    }
+    .a40>q {
+      quotes: 'h' 'd' 'e' 'l' 'l' 'r' 'l' 'o' 'o' 'w';
+      :empty {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="a1">
+    <span>hello<br>world</span>
+  </div>
+  <div class="a2">
+    <div>hello</div>
+    <div>world</div>
+  </div>
+  <div class="a3">
+    <pre>hello
+world</pre>
+  </div>
+  <div class="a4">
+    <textarea placeholder="hello
+world"></textarea>
+  </div>
+  <div class="a5">
+    <textarea>hello
+world</textarea>
+  </div>
+  <div class="a6">
+    <div title="hello
+world"></div>
+  </div>
+  <div class="a7">
+    <select multiple size="2">
+      <option>hello</option>
+      <option>world</option>
+    </select>
+  </div>
+  <div class="a8">
+    <div></div>
+  </div>
+  <div class="a9">
+    <span></span><span></span><span></span><span></span><span><br>
+    </span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="a10">
+    <span>w</span><span>o</span><span>r</span><span>l</span><span>d</span>
+  </div>
+  <div class="a11">
+    <ruby>world<rt>hello</rt></ruby>
+  </div>
+  <div class="a12">
+    <div></div>
+    <div></div>
+  </div>
+  <div class="a13">
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+  </div>
+  <div class="a14">
+    <div>
+      <span>hello</span><span>world</span>
+    </div>
+  </div>
+  <div class="a15">
+    <div><span>hello</span><span>world</span></div>
+  </div>
+  <div class="a16">
+    <span>world</span>
+  </div>
+  <div class="a17">
+    <div><span>hello</span><span>world</span></div>
+  </div>
+  <div class="a18">
+    <img alt="
+hello
+world">
+  </div>
+  <div class="a19">
+    <div>olleh</div>
+    <div>dlrow</div>
+  </div>
+  <div class="a20">
+    <div>helloworld</div>
+  </div>
+  <div class="a21">
+    <div>hweolrllod</div>
+  </div>
+  <div class="a22">
+    <div>odlllreohw</div>
+  </div>
+  <div class="a23">
+    <ol>
+      <li></li>
+      <li></li>
+    </ol>
+  </div>
+  <div class="a24">
+    <div data-text="hello
+world"></div>
+  </div>
+  <div class="a25">
+    <q></q>
+  </div>
+  <div class="a26">
+    <div><span><span><span><span></span></span></span></span></div>
+    <div><span><span><span><span></span></span></span></span></div>
+  </div>
+  <div class="a27">
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+  <div class="a28">
+    <span></span>
+  </div>
+  <div class="a29">
+    <div>hello<wbr>world</div>
+  </div>
+  <div class="a30">
+    <iframe srcdoc="<span>hello<br>world</span>"></iframe>
+  </div>
+  <div class="a31">
+    <div>hello<br>world</div>
+    </div>
+  </div>
+  <div class="a32">
+    <div></div>
+  </div>
+  <div class="a33">
+    <input type="button" value="hello
+world">
+  </div>
+  <div class="a34">
+    <select></select>
+  </div>
+  <div class="a35">
+    <select>
+      <option></option>
+    </select>
+  </div>
+  <div class="a36">
+    <div></div>
+  </div>
+  <div class="a37">
+    <span>hello<br>world</span>
+  </div>
+  <div class="a38">
+    <button interestfor="helloworld38"></button>
+    <span id="helloworld38" popover>hello<br>world</span>
+  </div>
+  <div class="a39">
+    <span></span>
+  </div>
+  <div class="a40">
+    <q><q><q><q><q><span></span></q></q></q></q></q>
+  </div>
+</body>
+</html>
