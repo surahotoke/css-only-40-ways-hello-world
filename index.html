@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>40通りの2行表示hello world</title>
   <style>
+    body {
+      counter-reset: way;
+    }
+    body>div[class^="a"] {
+      counter-increment: way;
+      padding: 10px;
+      border: solid;
+      margin: 10px;
+    }
+    body>div[class^="a"]::before {
+      content: "方法" counter(way) "\A";
+      white-space: pre;
+      color: red;
+    }
     .a6>div {
       width: 100px;
       height: 100px;
