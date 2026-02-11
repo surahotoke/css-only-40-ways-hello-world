@@ -15,8 +15,8 @@
       margin: 10px;
     }
     body>div[class^="a"]::before {
-      content: "方法" counter(way) "\A";
-      white-space: pre;
+      content: "方法" counter(way);
+      display: block;
       color: red;
     }
     .a6>div {
