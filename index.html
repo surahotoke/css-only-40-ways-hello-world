@@ -229,11 +229,9 @@
     .a29>div {
       width: min-content;
     }
-    .a31 {
-      div {
-        writing-mode: vertical-rl;
-        rotate: -90deg;
-      }
+    .a31>div {
+      writing-mode: vertical-rl;
+      rotate: -90deg;
     }
     .a32 {
       div {
@@ -285,9 +283,11 @@
       }
     }
     .a37 {
-      color: transparent;
-      background: black;
-      background-clip: text;
+      span {
+        color: transparent;
+        background: black;
+        background-clip: text;
+      }
     }
     .a38>button {
       width: 50px;
@@ -303,7 +303,7 @@
       initial-value: "hello\Aworld";
     }
     .a40>q {
-      quotes: 'h' 'd' 'e' 'l' 'l' 'r' 'l' 'o' 'o' 'w';
+      quotes: 'h' 'd' 'e' 'l' 'l' 'r' 'l' 'o' 'o' 'w' '' '';
       :empty {
         display: flex;
       }
@@ -436,7 +436,6 @@ world"></div>
   </div>
   <div class="a31">
     <div>hello<br>world</div>
-    </div>
   </div>
   <div class="a32">
     <div></div>
@@ -467,7 +466,7 @@ world">
     <span></span>
   </div>
   <div class="a40">
-    <q><q><q><q><q><span></span></q></q></q></q></q>
+    <q><q><q><q><q><q></q></q></q></q></q></q>
   </div>
 </body>
 </html>
