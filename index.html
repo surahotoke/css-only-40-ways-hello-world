@@ -8,13 +8,13 @@
     body {
       counter-reset: way;
     }
-    body>div[class^="a"] {
+    body>section[class^="a"] {
       counter-increment: way;
       padding: 10px;
       border: solid;
       margin: 10px;
     }
-    body>div[class^="a"]::before {
+    body>section[class^="a"]::before {
       content: "方法" counter(way);
       display: block;
       color: red;
@@ -341,53 +341,53 @@
   </style>
 </head>
 <body>
-  <div class="a1">
+  <section class="a1">
     <span>hello<br>world</span>
-  </div>
-  <div class="a2">
+  </section>
+  <section class="a2">
     <div>hello</div>
     <div>world</div>
-  </div>
-  <div class="a3">
+  </section>
+  <section class="a3">
     <pre>hello
 world</pre>
-  </div>
-  <div class="a4">
+  </section>
+  <section class="a4">
     <textarea placeholder="hello
 world"></textarea>
-  </div>
-  <div class="a5">
+  </section>
+  <section class="a5">
     <textarea>hello
 world</textarea>
-  </div>
-  <div class="a6">
+  </section>
+  <section class="a6">
     <div title="hello
 world"></div>
-  </div>
-  <div class="a7">
+  </section>
+  <section class="a7">
     <select multiple size="2">
       <option>hello</option>
       <option>world</option>
     </select>
-  </div>
-  <div class="a8">
+  </section>
+  <section class="a8">
     <div></div>
-  </div>
-  <div class="a9">
+  </section>
+  <section class="a9">
     <span></span><span></span><span></span><span></span><span><br>
     </span><span></span><span></span><span></span><span></span><span></span>
-  </div>
-  <div class="a10">
+  </section>
+  <section class="a10">
     <span>w</span><span>o</span><span>r</span><span>l</span><span>d</span>
-  </div>
-  <div class="a11">
+  </section>
+  <section class="a11">
     <ruby>world<rt>hello</rt></ruby>
-  </div>
-  <div class="a12">
+  </section>
+  <section class="a12">
     <div></div>
     <div></div>
-  </div>
-  <div class="a13">
+  </section>
+  <section class="a13">
     <ol>
       <li></li>
       <li></li>
@@ -400,118 +400,118 @@ world"></div>
       <li></li>
       <li></li>
     </ol>
-  </div>
-  <div class="a14">
+  </section>
+  <section class="a14">
     <div>
       <span>hello</span><span>world</span>
     </div>
-  </div>
-  <div class="a15">
+  </section>
+  <section class="a15">
     <div><span>hello</span><span>world</span></div>
-  </div>
-  <div class="a16">
+  </section>
+  <section class="a16">
     <span>world</span>
-  </div>
-  <div class="a17">
+  </section>
+  <section class="a17">
     <div><span>hello</span><span>world</span></div>
-  </div>
-  <div class="a18">
+  </section>
+  <section class="a18">
     <img alt="
 hello
 world">
-  </div>
-  <div class="a19">
+  </section>
+  <section class="a19">
     <div>olleh</div>
     <div>dlrow</div>
-  </div>
-  <div class="a20">
+  </section>
+  <section class="a20">
     <div>helloworld</div>
-  </div>
-  <div class="a21">
+  </section>
+  <section class="a21">
     <div>hweolrllod</div>
-  </div>
-  <div class="a22">
+  </section>
+  <section class="a22">
     <div>odlllreohw</div>
-  </div>
-  <div class="a23">
+  </section>
+  <section class="a23">
     <ol>
       <li></li>
       <li></li>
     </ol>
-  </div>
-  <div class="a24">
+  </section>
+  <section class="a24">
     <div data-text="hello
 world"></div>
-  </div>
-  <div class="a25">
+  </section>
+  <section class="a25">
     <q></q>
-  </div>
-  <div class="a26">
+  </section>
+  <section class="a26">
     <div><span><span><span><span></span></span></span></span></div>
     <div><span><span><span><span></span></span></span></span></div>
-  </div>
-  <div class="a27">
+  </section>
+  <section class="a27">
     <ul>
       <li></li>
     </ul>
-  </div>
-  <div class="a28">
+  </section>
+  <section class="a28">
     <span></span>
-  </div>
-  <div class="a29">
+  </section>
+  <section class="a29">
     <div>hello<wbr>world</div>
-  </div>
-  <div class="a30">
+  </section>
+  <section class="a30">
     <iframe srcdoc="<span>hello<br>world</span>"></iframe>
-  </div>
-  <div class="a31">
+  </section>
+  <section class="a31">
     <div>hello<br>world</div>
-  </div>
-  <div class="a32">
+  </section>
+  <section class="a32">
     <div></div>
-  </div>
-  <div class="a33">
+  </section>
+  <section class="a33">
     <input type="button" value="hello
 world">
-  </div>
-  <div class="a34">
+  </section>
+  <section class="a34">
     <select></select>
-  </div>
-  <div class="a35">
+  </section>
+  <section class="a35">
     <select>
       <option></option>
     </select>
-  </div>
-  <div class="a36">
+  </section>
+  <section class="a36">
     <div></div>
-  </div>
-  <div class="a37">
+  </section>
+  <section class="a37">
     <span>hello<br>world</span>
-  </div>
-  <div class="a38">
+  </section>
+  <section class="a38">
     <button interestfor="helloworld38"></button>
     <span id="helloworld38" popover>hello<br>world</span>
-  </div>
-  <div class="a39">
+  </section>
+  <section class="a39">
     <span></span>
-  </div>
-  <div class="a40">
+  </section>
+  <section class="a40">
     <q><q><q><q><q><q></q></q></q></q></q></q>
-  </div>
-  <div class="a41">
+  </section>
+  <section class="a41">
     <div>h&shy;world</div>
-  </div>
-  <div class="a42">
+  </section>
+  <section class="a42">
     <ul>
       <li></li>
     </ul>
-  </div>
-  <div class="a43">
+  </section>
+  <section class="a43">
     <input type="text" list="helloworld43">
     <datalist id="helloworld43">
       <option>hello</option>
       <option>world</option>
     </datalist>
-  </div>
+  </section>
 </body>
 </html>
