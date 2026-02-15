@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>40通りの2行表示hello world</title>
+  <title>42通りの2行表示hello world</title>
   <style>
     body {
       counter-reset: way;
@@ -322,6 +322,22 @@
         display: flex;
       }
     }
+    .a41>div {
+      font-family: monospace;
+      width: 5ch;
+      overflow-wrap: anywhere;
+      hyphens: manual;
+      hyphenate-character: "ello";
+    }
+    .a42 {
+      ul {
+        list-style: "hello\Aworld" inside;
+        padding-left: 0;
+      }
+      li {
+        white-space: pre;
+      }
+    }
   </style>
 </head>
 <body>
@@ -481,6 +497,14 @@ world">
   </div>
   <div class="a40">
     <q><q><q><q><q><q></q></q></q></q></q></q>
+  </div>
+  <div class="a41">
+    <div>h&shy;world</div>
+  </div>
+  <div class="a42">
+    <ul>
+      <li></li>
+    </ul>
   </div>
 </body>
 </html>

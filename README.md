@@ -11,3 +11,6 @@ world
 ## ページ
 https://surahotoke.github.io/css-only-40-ways-hello-world  
 ※ 一部の新しい方法はSafari / Firefoxでは機能しません
+
+## 更新
+2026年2/15：2つ増やしました。（42個になりました）
