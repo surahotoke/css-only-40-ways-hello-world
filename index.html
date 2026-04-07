@@ -19,16 +19,20 @@
       display: block;
       color: red;
     }
-    .a6>div {
-      width: 100px;
-      height: 100px;
-      background: green;
+    @scope(.a6) {
+      >div {
+        width: 100px;
+        height: 100px;
+        background: green;
+      }
     }
-    .a8>div::before {
-      white-space: pre;
-      content: "hello\Aworld";
+    @scope(.a8) {
+      >div::before {
+        white-space: pre;
+        content: "hello\Aworld";
+      }
     }
-    .a9 {
+    @scope(.a9) {
       ::before {
         content: counter(a, lower-alpha);
       }
@@ -60,7 +64,7 @@
         counter-reset: a 4;
       }
     }
-    .a10 {
+    @scope(.a10) {
       :nth-child(1) {
         text-emphasis: 'h';
       }
@@ -77,12 +81,12 @@
         text-emphasis: 'o';
       }
     }
-    .a11 {
+    @scope(.a11) {
       rt {
         letter-spacing: 3px;
       }
     }
-    .a12 {
+    @scope(.a12) {
       ::before {
         content: counter(a, lower-alpha);
       }
@@ -93,7 +97,7 @@
         counter-reset: a 10786572;
       }
     }
-    .a13 {
+    @scope(.a13) {
       ol {
         font-family: monospace;
         display: flex;
@@ -104,85 +108,105 @@
       li {
         list-style: helloworld13 inside;
       }
-    }
-    @counter-style helloworld13 {
-      system: cyclic;
-      symbols: h e l l o w o r l d;
-      suffix: '';
-    }
-    .a14>div {
-      display: flex;
-      flex-direction: column;
-    }
-    .a15>div {
-      display: grid;
-    }
-    .a16>span {
-      display: ruby;
-      &::after {
-        display: ruby-text;
-        content: "hello";
+      @counter-style helloworld13 {
+        system: cyclic;
+        symbols: h e l l o w o r l d;
+        suffix: '';
       }
     }
-    .a17>div {
-      display: flow-root;
-      span {
-        float: left;
-        clear: both;
+    @scope(.a14) {
+      >div {
+        display: flex;
+        flex-direction: column;
       }
     }
-    .a18>img {
-      white-space: pre;
+    @scope(.a15) {
+      >div {
+        display: grid;
+      }
     }
-    .a19>div {
-      font-family: monospace;
-      text-indent: 4ch;
-      letter-spacing: -2ch;
+    @scope(.a16) {
+      >span {
+        display: ruby;
+        &::after {
+          display: ruby-text;
+          content: "hello";
+        }
+      }
     }
-    .a20>div {
-      font-family: monospace;
-      overflow-wrap: anywhere;
-      width: 5ch;
+    @scope(.a17) {
+      >div {
+        display: flow-root;
+        span {
+          float: left;
+          clear: both;
+        }
+      }
     }
-    .a21>div {
-      writing-mode: vertical-lr;
-      text-orientation: upright;
-      overflow-wrap: anywhere;
-      height: 2ch;
-      line-height: 10px;
+    @scope(.a18) {
+      >img {
+        white-space: pre;
+      }
     }
-    .a22>div {
-      writing-mode: vertical-rl;
-      text-orientation: upright;
-      overflow-wrap: anywhere;
-      height: 2ch;
-      line-height: 10px;
+    @scope(.a19) {
+      >div {
+        font-family: monospace;
+        text-indent: 4ch;
+        letter-spacing: -2ch;
+      }
     }
-    .a23 {
+    @scope(.a20) {
+      >div {
+        font-family: monospace;
+        overflow-wrap: anywhere;
+        width: 5ch;
+      }
+    }
+    @scope(.a21) {
+      >div {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        overflow-wrap: anywhere;
+        height: 2ch;
+        line-height: 10px;
+      }
+    }
+    @scope(.a22) {
+      >div {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        overflow-wrap: anywhere;
+        height: 2ch;
+        line-height: 10px;
+      }
+    }
+    @scope(.a23) {
       ol {
         padding-left: 0;
       }
       li {
         list-style: helloworld23 inside;
       }
+      @counter-style helloworld23 {
+        system: cyclic;
+        symbols: hello world;
+        suffix: '';
+      }
     }
-    @counter-style helloworld23 {
-      system: cyclic;
-      symbols: hello world;
-      suffix: '';
-    }
-    .a24 {
+    @scope(.a24) {
       div::before {
         white-space: pre;
         content: attr(data-text);
       }
     }
-    .a25>q {
-      quotes: "hello" "world";
-      display: flex;
-      flex-direction: column;
+    @scope(.a25) {
+      >q {
+        quotes: "hello" "world";
+        display: flex;
+        flex-direction: column;
+      }
     }
-    .a26 {
+    @scope(.a26) {
       :empty::before {
         content: counters(a, '', lower-alpha);
       }
@@ -217,7 +241,7 @@
         }
       }
     }
-    .a27 {
+    @scope(.a27) {
       ul {
         padding-left: 0;
       }
@@ -229,7 +253,7 @@
         content: "hello\Aworld";
       }
     }
-    .a28 {
+    @scope(.a28) {
       ::before {
         content: "world";
         display: list-item;
@@ -240,14 +264,18 @@
         content: "hello\A";
       }
     }
-    .a29>div {
-      width: min-content;
+    @scope(.a29) {
+      >div {
+        width: min-content;
+      }
     }
-    .a31>div {
-      writing-mode: vertical-rl;
-      rotate: -90deg;
+    @scope(.a31) {
+      >div {
+        writing-mode: vertical-rl;
+        rotate: -90deg;
+      }
     }
-    .a32 {
+    @scope(.a32) {
       div {
         width: 1px;
         aspect-ratio: 1;
@@ -267,7 +295,7 @@
         white-space: pre;
       }
     }
-    .a34 {
+    @scope(.a34) {
       select,
       ::picker(select) {
         appearance: base-select;
@@ -277,7 +305,7 @@
         content: "hello\Aworld";
       }
     }
-    .a35 {
+    @scope(.a35) {
       select,
       ::picker(select) {
         appearance: base-select;
@@ -287,7 +315,7 @@
         content: "hello\Aworld";
       }
     }
-    .a36 {
+    @scope(.a36) {
       div {
         overflow: auto;
       }
@@ -296,40 +324,48 @@
         content: "hello\Aworld";
       }
     }
-    .a37 {
+    @scope(.a37) {
       span {
         color: transparent;
         background: black;
         background-clip: text;
       }
     }
-    .a38>button {
-      width: 50px;
-      height: 50px;
-    }
-    .a39>span::before {
-      white-space: pre;
-      content: var(--a);
-    }
-    @property --a {
-      syntax: "<string>";
-      inherits: false;
-      initial-value: "hello\Aworld";
-    }
-    .a40>q {
-      quotes: 'h' 'd' 'e' 'l' 'l' 'r' 'l' 'o' 'o' 'w' '' '';
-      :empty {
-        display: flex;
+    @scope(.a38) {
+      >button {
+        width: 50px;
+        height: 50px;
       }
     }
-    .a41>div {
-      font-family: monospace;
-      width: 5ch;
-      overflow-wrap: anywhere;
-      hyphens: manual;
-      hyphenate-character: "ello";
+    @scope(.a39) {
+      >span::before {
+        white-space: pre;
+        content: var(--a);
+      }
+      @property --a {
+        syntax: "<string>";
+        inherits: false;
+        initial-value: "hello\Aworld";
+      }
     }
-    .a42 {
+    @scope(.a40) {
+      >q {
+        quotes: 'h' 'd' 'e' 'l' 'l' 'r' 'l' 'o' 'o' 'w' '' '';
+        :empty {
+          display: flex;
+        }
+      }
+    }
+    @scope(.a41) {
+      >div {
+        font-family: monospace;
+        width: 5ch;
+        overflow-wrap: anywhere;
+        hyphens: manual;
+        hyphenate-character: "ello";
+      }
+    }
+    @scope(.a42) {
       ul {
         list-style: "hello\Aworld" inside;
         padding-left: 0;
@@ -338,9 +374,11 @@
         white-space: pre;
       }
     }
-    .a44>div {
-      white-space: pre;
-      font-family: monospace;
+    @scope(.a44) {
+      >div {
+        white-space: pre;
+        font-family: monospace;
+      }
       .l {
         text-shadow: 1ch 0lh, 1ch 1lh;
       }
